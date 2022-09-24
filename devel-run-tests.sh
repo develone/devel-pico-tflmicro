@@ -27,6 +27,10 @@ openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program exampl
 
 sleep 3
 
+openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program examples/magic_wand/gesture_predictor_test.elf verify reset exit"
+
+sleep 3
+
 openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program examples/micro_speech/command_responder_test.elf verify reset exit"
 
 sleep 3
